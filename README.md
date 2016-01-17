@@ -4,10 +4,10 @@ collectionView瀑布流效果，图片高度自适应，可以后台返回高度
 #使用方法
 ##1、导入头文件#import "XWWaterFlowLayout.h"  这个是重写了collectionview的布局方法
 ##2、写布局属性并且实现协议代理
-  XWWaterFlowLayout *layout = [[XWWaterFlowLayout alloc]init];
+        XWWaterFlowLayout *layout = [[XWWaterFlowLayout alloc]init];
         layout.delegate = self;
         layout.columnsCount = 2;
-    UICollectionView *collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height) collectionViewLayout:layout];
+        UICollectionView *collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height) collectionViewLayout:layout];
 #实现协议的代理方法
       #pragma mark -XWWaterFlowLayoutDelegate-
      -(CGFloat) waterFlowLayout:(XWWaterFlowLayout *)waterFlowLayout heightForWidth:(CGFloat)width atIndexPath:(NSIndexPath *)indexPath{
